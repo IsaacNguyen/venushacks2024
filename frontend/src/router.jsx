@@ -1,4 +1,5 @@
-import App from './App.jsx'
+
+import Main from './pages/Main.jsx'
 import AddressInput from './pages/AddressInput.jsx'
 import {
     createBrowserRouter
@@ -8,7 +9,7 @@ import {
   export const router = createBrowserRouter([
     {
       path: "/",
-      element: <App/>,
+      element: <Main/>,
     },
     {
       path:'/preferences',
