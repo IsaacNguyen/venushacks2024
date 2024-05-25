@@ -17,7 +17,7 @@ p{
     margin: 0;
     padding: 20px;
     padding-top: 0px;
-    padding-left: 5px;
+    padding-left: 2px;
 
     border: 0;
 }
@@ -40,7 +40,7 @@ button:hover{
     background-color: #535bf2;
 }
 img{
-    width: 100%;
+    width: 75%;
     height: auto;
     border-radius: 50%;
 }
@@ -51,6 +51,7 @@ img{
     max-width: 50%;
     min-width: 400px;
     min-height: auto;
+    padding-right:100px;
 }
 .home{
     display: flex;
@@ -71,5 +72,6 @@ img{
     flex-direction: column;
     padding-right: 20px;
     padding: 0px;
+    padding-left: 200px;
     justify-content: flex-start;
 }
