@@ -12,7 +12,7 @@ import {
       element: <Main/>,
     },
     {
-      path:'/preferences',
+      path:'/address',
       element: <AddressInput/>,
     }
   ]);
