@@ -1,9 +1,16 @@
 import react from 'react'
 import './styles/Homepage.css'
 import cow from '../assets/cow_car.png'
+import { useNavigate } from 'react-router-dom';
+
 
 function Homepage(){
     
+    const navigate = useNavigate();
+    const toAddressInput = () => {
+        navigate('/address')
+    }
+
     return(
         <>
         <div class = 'home'>
@@ -11,7 +18,7 @@ function Homepage(){
             <h1><b>moove</b></h1>
             <p>helping college students moove out since 2024</p>
             <div class = 'butt'>
-            <button>get started</button>
+            <button onClick={toAddressInput}>get started</button>
             </div>
         </div>
         <div class = 'house'>
