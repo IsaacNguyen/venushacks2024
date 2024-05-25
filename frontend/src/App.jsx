@@ -1,31 +1,12 @@
-import { useState, useEffect } from 'react'
+import AddressInput from './pages/AddressInput.jsx'
+import {Link} from 'react-router-dom'
 
 function App() {
 
-  const [backendData, setBackendData] = useState([{}])
-
-
-  useEffect(() =>{
-    fetch("http://localhost:3000/api").then(
-      response => response.json()
-    ).then(
-      data => {
-        setBackendData(data)
-      }
-    )
-  }, [])
-
   return (
     <>
-    <div>
-       {(typeof backendData.users === 'undefined') ? (
-          <p>Loading...</p>
-        ): (
-          backendData.users.map((user,i) => (
-            <p key ={i}>{user}</p>
-          ))
-        )}
-    </div>
+      <p>heyyy</p>
+      <Link to='/preferences'>goooo</Link>
     </>
   )
 }
