@@ -1,4 +1,8 @@
 
+import Main from './pages/Main.jsx'
+import AddressInput from './pages/AddressInput.jsx'
+import SellerVerification from './pages/SellerVerification.jsx';
+import SellerKey from './pages/SellerKey.jsx';
 import Main from './pages/Main.jsx';
 import AddressInput from './pages/AddressInput.jsx';
 import ReportPage from './pages/ReportPage.jsx';
@@ -38,6 +42,14 @@ import NotVerifedPage from './pages/NotVerifiedPage.jsx';
     {
       path:'/address',
       element: <AddressInput/>,
+    },
+    {
+      path:'/verification',
+      element: <SellerVerification/>
+    },
+    {
+      path:'/key-generate',
+      element: <SellerKey/>
     },
     {
       path:'/tests',
