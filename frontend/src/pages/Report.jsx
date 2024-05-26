@@ -1,7 +1,8 @@
-import react from 'react'
-import Circle from './Circle';
+
+import MooScore from './MooScore';
 import ReportInfo from './ReportInfo';
 import styles from './styles/Report.module.css';
+
 function Report(data){
     return(
         <div className = {styles.report}>
@@ -29,7 +30,7 @@ function Report(data){
                 <div className = {styles.topr}>
                     <div className = {styles.score}>
                         <h2>mooscore</h2>
-                        <Circle highlighted={data.score}/>
+                        {/* <Circle highlighted={data.score}/> */}
                         <img></img>
                     </div>
                     <div className = {styles.projectedv}>

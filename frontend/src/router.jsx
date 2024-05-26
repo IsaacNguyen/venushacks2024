@@ -40,14 +40,6 @@ import NotVerifedPage from './pages/NotVerifiedPage.jsx';
       element: <AddressInput/>,
     },
     {
-      path:'/verification',
-      element: <SellerVerification/>
-    },
-    {
-      path:'/key-generate',
-      element: <SellerKey/>
-    },
-    {
       path:'/tests',
       element: <Tests/>,
     },
