@@ -1,6 +1,7 @@
 import react from 'react'
 import cow from '../assets/cow_car.png'
 import styles from './styles/Quiz.module.css'
+import { useNavigate } from 'react-router-dom'
 
 function Quiz(){
     const[currentQuestionIndex, setQuestionIndex] = react.useState(0);
@@ -31,6 +32,8 @@ function Quiz(){
         }
     };
 
+    const navigate = useNavigate();
+
     const question = questions[currentQuestionIndex];
     return(
         <>
@@ -39,9 +42,16 @@ function Quiz(){
                 <div className = {styles.question}>
                     <h1>{question.text}</h1>
                 </div>
-                <input type = {question.type} onKeyDown={handleKeyPress}   ref={(input) => input && input.focus()} maxlength = {250}/>
+                <div className = {styles.input}>
+                    <input type = {question.type} onKeyDown={handleKeyPress}   ref={(input) => input && input.focus()} maxlength = {250}/>
+                </div>
+                <div className = {styles.continue}>
+                    <button onClick={nextQuestion}>continue</button>
+                </div>
+                <div className = {styles.back}>
+                    <button onClick={prevQuestion}>&lt; back</button>
+                </div>
             </div>
-
             <div className = {styles.pic}>
                 <img src={cow}></img>
             </div>

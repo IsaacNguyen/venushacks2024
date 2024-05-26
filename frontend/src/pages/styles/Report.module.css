@@ -55,9 +55,6 @@ body {
     flex-direction: column;
     margin-bottom: 20px;
 }
-.score{
-
-}
 .bottom{
     flex:4;
     background-color: lightgrey;
