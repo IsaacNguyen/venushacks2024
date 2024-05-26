@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 function NotVerified(){
     const navigate = useNavigate();
     const handleSubmit = () => {
-        navigate('/q')
+        navigate('/report')
     }
 
     return (

@@ -65,14 +65,13 @@ function Quiz() {
         const response = await callKeyApi(address, key);
         if (response.message == 'Key found for the specified address'){
             console.log('ITOSIHFDKLDSF A MATCH')
-            //navigate('/report');
+            navigate('/verified');
         }
         else
         {
             console.log('nah jit')
-            //navigate('/report');
+            navigate('/notverified');
         }
-       
     }
   };
 
