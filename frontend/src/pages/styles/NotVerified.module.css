@@ -18,7 +18,7 @@ h1{
     margin: 0;
     border:0;
     color: white;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 p{
@@ -63,11 +63,15 @@ p{
     padding-left: 100px;
 }
 
-.input{
+.message{
     flex:1;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
     padding-left: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200px;
+    font-size: 24px;
+    color: white;
 }
 
 .continue{
