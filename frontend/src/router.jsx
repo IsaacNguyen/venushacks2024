@@ -32,7 +32,7 @@ import NotVerifedPage from './pages/NotVerifiedPage.jsx';
       element: <QuizPage/>,
     },
     {
-      path: '/verify',
+      path: '/verified',
       element: <VerifyPage/>,
     },
     {
