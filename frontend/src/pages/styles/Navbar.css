@@ -1,4 +1,5 @@
-header{
+
+nav header {
     color: black;
     text-align: left;
     position: fixed;
@@ -7,57 +8,50 @@ header{
     width: 100%;
     z-index: 1000;
     padding: 20px 0;
-
-}
-nav ul{
-    list-style: none;
-    display: flex; 
-    justify-content: flex-start;
- 
-    flex-direction: row;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-
+    display: flex;
+    justify-content: space-between; /* Align children to the sides */
+    align-items: center; /* Center items vertically */
 }
 
-nav li{
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;;
-    font-size: 35px;
-
+.left, .right {
+    display: flex;
+    align-items: center;
 }
 
-.name{
-    padding: 0;
-    padding-top:15px;
-    
+.left {
+    justify-content: flex-start; /* Align left section items to the start */
 }
 
-.logo{
-   
-    padding: 0;
-    padding-left: 20px;
-    margin: 0;
+.right {
+    justify-content: flex-end; /* Align right section items to the end */
+}
+
+.logo img {
     height: auto;
-    width: 82px;
-    
+    width: 82px; /* Set width to your preference */
     transition: all 0.3s ease;
-
-  
 }
 
-.logo:hover{
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 0;
+    font-size: 35px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+}
+nav .right a{
+    margin-right: 40px;
+    font-size:35px;
+    padding:0;
+    padding-bottom: 20px;
+
+}
+
+nav .left:hover, nav .right:hover{
     transform: scale(1.1);
     filter:brightness(1.5);
     filter: drop-shadow(0 0 10px #bee9ac);
     
-}
-
-.nav-links{
-    color:white;
-    display:flex;
-    justify-content: flex-start;
-    flex-direction: row;
 }

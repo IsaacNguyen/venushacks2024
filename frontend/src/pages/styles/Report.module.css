@@ -1,0 +1,90 @@
+.report body {
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    min-height: 900px;
+    min-width: auto;
+
+}
+
+.report{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+
+}
+.report .title{
+    flex:1;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+.report .top{
+    display: flex;
+    flex:5;
+    width: 100%;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+}
+
+.report .info{
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+}
+.report .linfo,.report .rinfo{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    font-size: 18px;
+    margin-right: 40px;
+    align-items:center;
+    justify-content: center;
+}
+
+
+.report .topr{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.report .score{
+    flex:1;
+}
+.report .bottom{
+    flex:4;
+    background-color: lightgrey;
+    width: 100%;
+    height: 100%;
+}
+.report .mortgage-container {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+ .report .photos {
+    background-color: #eee; /* Placeholder for photos */
+    height: 200px; /* Adjust as needed */
+  }
+ .report .score, .report .projectedv {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
