@@ -1,4 +1,4 @@
-body {
+.report body {
     margin: 0;
     padding: 20px;
     width: 100%;
@@ -7,6 +7,8 @@ body {
     justify-content: center;
     align-items: center;
     font-family: "Poppins", sans-serif;
+    min-height: 900px;
+    min-width: auto;
 
 }
 
@@ -20,14 +22,14 @@ body {
     padding-left: 20px;
 
 }
-.title{
+.report .title{
     flex:1;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
 
 }
-.top{
+.report .top{
     display: flex;
     flex:5;
     width: 100%;
@@ -36,12 +38,12 @@ body {
 
 }
 
-.info{
+.report .info{
     flex: 2;
     display: flex;
     flex-direction: row;
 }
-.linfo, .rinfo{
+.report .linfo,.report .rinfo{
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -53,18 +55,36 @@ body {
 }
 
 
-.topr{
+.report .topr{
     flex:1;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
-.score{
+.report .score{
     flex:1;
 }
-.bottom{
+.report .bottom{
     flex:4;
     background-color: lightgrey;
     width: 100%;
     height: 100%;
 }
+.report .mortgage-container {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+ .report .photos {
+    background-color: #eee; /* Placeholder for photos */
+    height: 200px; /* Adjust as needed */
+  }
+ .report .score, .report .projectedv {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
