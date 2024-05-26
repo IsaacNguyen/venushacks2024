@@ -3,6 +3,13 @@ import MooScore from './MooScore';
 import ReportInfo from './ReportInfo';
 import styles from './styles/Report.module.css';
 
+const propData = JSON.parse(localStorage.getItem('propertyData'))
+const baths = propData.Records[0].IntRoomInfo.BathCount;
+const beds = propData.Records[0].IntRoomInfo.BedroomsCount;
+const sqft = propData.Records[0].PropertySize.AreaBuilding;
+const stories = propData.Records[0].IntRoomInfo.StoriesCount;
+const owner = propData.Records[0].PrimaryOwner.Name1Full;
+
 function Report(data){
     return(
         <div className = {styles.report}>
@@ -16,14 +23,15 @@ function Report(data){
                     </div>
                     <div className = {styles.info}>
                         <div className = {styles.linfo}>
-                            <ReportInfo text={`📏${data.sqft} sqft`} />
-                            <ReportInfo text ={`🛏️${data.beds} beds`}/>
-                            <ReportInfo text ={`🛁${data.baths} baths`}/>
+                            <ReportInfo text ={`🐮 ${owner}`}/>
+                            <ReportInfo text={`📏 ${sqft} sqft`} />
+                           
                         </div>
                         <div className = {styles.rinfo}>
-                            <ReportInfo text ={`🏠${data.stories} stories`}/>
-                            <ReportInfo text ={`🐮${data.owner}`}/>
-                            <ReportInfo text ={`📝${data.detail} `}/>
+                            {/* <ReportInfo text ={`🏠 ${stories} stories`}/> */}
+                            <ReportInfo text ={`🛏️ ${beds} beds`}/>
+                            <ReportInfo text ={`🛁 ${baths} baths`}/>
+                            {/* <ReportInfo text ={`📝 ${data.detail} `}/> */}
                         </div>
                     </div>
                 </div>

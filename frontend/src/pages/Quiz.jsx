@@ -28,7 +28,7 @@ function Quiz() {
       const response = await fetch(`http://localhost:3000/property?address=${address}`);
       const result = await response.json();
       localStorage.setItem('propertyData', JSON.stringify(result));
-      //console.log(JSON.stringify(result))
+      console.log(JSON.stringify(result))
       
     } catch (err) {
       setError('Issue retrieving address data. Try again');
