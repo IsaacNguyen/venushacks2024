@@ -20,6 +20,7 @@ function AddressInput() {
       const result = await response.json();
       localStorage.setItem('propertyData', JSON.stringify(result));
       console.log(JSON.stringify(result))
+      
     } catch (err) {
       setError('Issue retrieving address data. Try again');
       console.log('ahhhh error')
