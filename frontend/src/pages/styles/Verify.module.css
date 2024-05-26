@@ -1,0 +1,161 @@
+html {
+    height: 100vh; /* 100% of the viewport height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+
+    background-color: #1e212b;
+
+}
+
+body{
+    background-image: linear-gradient(#58A4B0, #1e212b)
+}
+
+h1{
+    font-size: 75px;
+    font-family: 'Poppins', sans-serif;
+    padding:0;
+    margin: 0;
+    border:0;
+    color: white;
+    white-space: nowrap;
+}
+
+p{
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100px;
+    padding:0;
+    margin:0;
+    border:0;
+    border:0;
+    color: white;
+}
+
+.error{
+    flex: 1;
+    align-self: flex-start;
+    margin-top: 10px;
+    padding-left: 50px;
+}
+
+.center{
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.quiz{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    min-width:400px;
+}
+
+.question{
+    flex:1;
+    width: 100%;
+    padding-left: 100px;
+}
+
+.message{
+    flex:1;
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200px;
+    font-size: 24px;
+    color: white;
+}
+
+.continue{
+    flex:1;
+    width: 50%;
+    margin-top: 20px;
+    align-self: flex-start;
+    padding-left: 50px;
+}
+
+.back{
+    flex:1;
+    width: 50%;
+    margin-top: 20px;
+    align-self: flex-start;
+    padding-left:50px;
+    color: white;
+}
+
+.button{
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100px;
+    padding:0;
+    margin:0;
+    border:0;
+    background-color: #BEE9AC;
+    color: black;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.back button{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 50px;
+    padding: 0;
+    margin:0;
+    border:0;
+    color: white;
+    background-color: transparent;
+    cursor:pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: left;
+    margin-left: 2px;
+}
+
+.back button:hover {
+    text-decoration: underline;
+}
+img{
+    width: 75%;
+    height: auto;
+    border-radius: 0;
+    margin-left: 30px;
+}
+.pic{
+    flex:1;
+    max-width: 50%;
+    max-height: auto;
+    min-height: auto;
+}
+
+.input input[type="number"], input[type="text"] {
+    /* Add your styles to customize the appearance of the number input */
+    width: 75%; /* Set the width to fill its container */
+    padding: 14px 40px; /* Add padding to the input */
+    font-size: 20px; /* Adjust the font size */
+    border: 2px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    background-color: #f0f0f0; /* Change background color */
+    color: #333; /* Change text color */
+    outline: none; /* Remove outline when focused */
+}
+
+/* Optionally, style the arrow button of the number input */
+.input input[type="number"]::-webkit-inner-spin-button,
+.input input[type="number"]::-webkit-outer-spin-button {
+    appearance: none; /* Remove default arrow button */
+    margin: 0; /* Remove margin */
+}
