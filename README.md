@@ -33,11 +33,8 @@ To get started with Moove, follow these steps:
 4. Configure the Melissa Data API in a .env file for accessing property data.
 5. Run the application locally using `npm run dev`.
 
-## Contributing
-Contributions to Moove are welcome! Whether you want to report a bug, request a feature, or submit a pull request, please feel free to do so on our GitHub repository.
-
 ## License
-Moove is licensed under the MIT License. See the LICENSE file for more details.
+Moove is licensed under the MIT License. We also used the Melissa API. See the LICENSE file for more details.
 
 ## Contact
 If you have any questions or suggestions regarding Moove, feel free to reach out to us at [email@example.com](mailto:email@example.com).
