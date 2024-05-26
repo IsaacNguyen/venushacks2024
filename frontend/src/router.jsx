@@ -1,5 +1,5 @@
 
-import Main from './pages/Main.jsx';
+import Main from './pages/pages/Main.jsx';
 import AddressInput from './pages/AddressInput.jsx';
 import ReportPage from './pages/ReportPage.jsx';
 import QuizPage from './pages/QuizPage.jsx';
