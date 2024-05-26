@@ -58,7 +58,7 @@ export default Graph;
 
 /*
 A mortgage is a long-term loan from a financial institution used to purchase or maintain a home.
-The borrower agrees to repay this loan in equal, monthly payments over a certain time span, with
+The borrower agrees to repay this loan in equal, MOOnthly payments over a certain time span, with
 their home as a collateral. Be sure to pay them on time, and be smart with your MOOney!
 */
 
@@ -66,12 +66,12 @@ their home as a collateral. Be sure to pay them on time, and be smart with your 
 Real estate fraud is UDDERly serious! Over 25% of all real estate transactions involve 
 some sort of fraud. Title frauds and rental scams are the most popular of those today,
 where scammers pose fake listings or pose as the property owner to sell their property. That's 
-why you can trust moove to protect your next purchase through our SSN and name verification!
+why you can trust Moove to protect your next purchase through our SSN and name verification!
 */
 
 /*
-Housing markets are MOOving all the time! That's why moove analyzes trends in housing 
-market data for you, so you can make the MOOst informed decision with your hard-earned
+Housing markets are MOOving all the time! That's why Moove analyzes trends in housing 
+market data for you, so you can make the MOOst MOOvelous decisions with your hard-earned
 MOOney!
 */
 
