@@ -1,7 +1,7 @@
 import react from 'react'
 
-import ReportInfo from './ReportInfo'
-import styles from './styles/Report.module.css'
+import ReportInfo from './ReportInfo';
+import styles from './styles/Report.module.css';
 function Report(){
     return(
         <div className = {styles.report}>

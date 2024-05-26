@@ -27,6 +27,7 @@ nav li{
     font-weight: 400;
     font-style: normal;;
     font-size: 35px;
+    
 
 }
 
@@ -63,4 +64,15 @@ ul:hover{
     display:flex;
     justify-content: flex-start;
     flex-direction: row;
+}
+
+ul a{
+    text-decoration: none;
+    color: black;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
 }
