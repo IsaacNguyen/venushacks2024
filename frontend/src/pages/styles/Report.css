@@ -1,0 +1,54 @@
+body{
+    width: 100%;
+}
+.report{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+.title{
+    flex:1;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+.top{
+    display: flex;
+    flex:5;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+}
+.l-info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    align-items:center;
+    justify-content: center;
+}
+.r-info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-r{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.bottom{
+    flex:4;
+}
