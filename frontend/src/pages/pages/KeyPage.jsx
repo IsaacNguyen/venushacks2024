@@ -1,5 +1,5 @@
-import Key from './Key';
-import Navbar from './Navbar';
+import Key from '../Key';
+import Navbar from '../Navbar';
 function KeyPage() {
     return (
         <div>

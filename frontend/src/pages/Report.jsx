@@ -1,8 +1,8 @@
 import react from 'react'
-
+import Circle from './Circle';
 import ReportInfo from './ReportInfo';
 import styles from './styles/Report.module.css';
-function Report(){
+function Report(data){
     return(
         <div className = {styles.report}>
             <div className = {styles.title}>
@@ -15,28 +15,34 @@ function Report(){
                     </div>
                     <div className = {styles.info}>
                         <div className = {styles.linfo}>
-                            <ReportInfo text = 'sqft'/>
-                            <ReportInfo text = 'beds'/>
-                            <ReportInfo text = 'baths'/>
+                            <ReportInfo text={`📏${data.sqft} sqft`} />
+                            <ReportInfo text ={`🛏️${data.beds} beds`}/>
+                            <ReportInfo text ={`🛁${data.baths} baths`}/>
                         </div>
                         <div className = {styles.rinfo}>
-                            <ReportInfo text = 'stories'/>
-                            <ReportInfo text = 'owner'/>
-                            <ReportInfo text = 'detail'/>
+                            <ReportInfo text ={`🏠${data.stories} stories`}/>
+                            <ReportInfo text ={`🐮${data.owner}`}/>
+                            <ReportInfo text ={`📝${data.detail} `}/>
                         </div>
                     </div>
                 </div>
                 <div className = {styles.topr}>
                     <div className = {styles.score}>
                         <h2>mooscore</h2>
-                        <h2>project value</h2>
+                        <Circle highlighted={data.score}/>
                         <img></img>
+                    </div>
+                    <div className = {styles.projectedv}>
+                        <h2>project value</h2>
                     </div>
                 </div>
 
             </div>
             <div className = {styles.bottom}>
-                <h2>mortgage plan</h2>
+            <div className= {styles.mortgagec}>
+             
+              <small>what's a mortgage?</small>
+              </div>
             </div>
             
         </div>

@@ -1,6 +1,6 @@
-import Quiz from './Quiz';
+import Quiz from '../Quiz';
 import React from 'react';
-import Navbar from './Navbar';
+import Navbar from '../Navbar';
 
 function QuizPage() {
     return (

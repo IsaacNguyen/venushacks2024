@@ -1,7 +1,12 @@
 html, body {
-    height: 100vh; /* 100% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+       height: 100%; /* 100% of the viewport height */
+    width: 100%; /* 100% of the viewport width */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
+    border:0;
     overflow:auto;
 }
 
