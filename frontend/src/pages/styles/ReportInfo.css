@@ -1,0 +1,12 @@
+.report1{
+    flex:1;
+   
+    background-color: lightgrey;
+    width: 75%;
+    height: 25%;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 25%;
+    font-size: 18px;
+
+}

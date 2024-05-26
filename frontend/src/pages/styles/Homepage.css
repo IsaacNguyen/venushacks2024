@@ -2,7 +2,7 @@ html, body {
     height: 100vh; /* 100% of the viewport height */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
-    ;
+    overflow:auto;
 }
 
 
@@ -22,7 +22,9 @@ p{
     border: 0;
 }
 button{
-    font-family: poppins;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 20px;
     background-color: #5a5b74;
     color: white;
@@ -42,7 +44,7 @@ button:hover{
 img{
     width: 75%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 0;
 }
 .house{
     flex:2;
@@ -66,7 +68,7 @@ img{
     text-align: left;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    font-style: normal;;
+    font-style: normal;
     flex: 1;    
     display: flex;
     flex-direction: column;
