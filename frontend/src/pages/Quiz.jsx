@@ -1,6 +1,6 @@
 import react from 'react'
 import cow from '../assets/cow_car.png'
-import './styles/Quiz.module.css'
+import './styles/Quiz.css'
 
 function Quiz(){
     const[currentQuestionIndex, setQuestionIndex] = react.useState(0);
