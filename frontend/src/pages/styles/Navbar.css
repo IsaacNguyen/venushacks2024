@@ -1,4 +1,4 @@
-header{
+nav header{
     color: black;
     text-align: left;
     position: fixed;
@@ -13,12 +13,13 @@ nav ul{
     list-style: none;
     display: flex; 
     justify-content: flex-start;
- 
+
     flex-direction: row;
-    gap: 20px;
+    gap: 0;
     padding: 0;
     margin: 0;
-
+    
+    align-items: center;
 }
 
 nav li{
@@ -27,18 +28,21 @@ nav li{
     font-style: normal;;
     font-size: 35px;
 
+
 }
 
 .name{
     padding: 0;
-    padding-top:15px;
+    padding-top:0;
+    padding-bottom:10px;
     
 }
 
 .logo{
    
     padding: 0;
-    padding-left: 20px;
+    padding-left: 25px;
+    border: 0;
     margin: 0;
     height: auto;
     width: 82px;
@@ -48,7 +52,7 @@ nav li{
   
 }
 
-.logo:hover{
+ul:hover{
     transform: scale(1.1);
     filter:brightness(1.5);
     filter: drop-shadow(0 0 10px #bee9ac);
@@ -60,4 +64,15 @@ nav li{
     display:flex;
     justify-content: flex-start;
     flex-direction: row;
+}
+
+nav li a{
+    text-decoration: none;
+    color: White; /* Ensure color consistency */
+    padding: 0 20px; /* Adjust padding as necessary */
+    font-size: 35px; /* Matches <li> font size */
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
 }

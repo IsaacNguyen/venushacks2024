@@ -4,21 +4,27 @@ import React from 'react'
 import cow from '../assets/cow.png'
 function Navbar(){
     return(
+        <nav>
+     
         <header>
             <div class = 'nav-links'>
-            <nav>
-                <ul>   
+                <ul> 
+                    
                     <div class = 'logo'>
-                       <li><img src={cow}></img></li>
+                       <li><a href = '/'><img src={cow}></img></a></li>
                        
                     </div>
                     <div class = 'name'>
-                    <li><b>moove</b></li>
+                    <li><a href = '/'><b>moove</b></a></li>
                     </div>
-                </ul>
-            </nav>
+                    
+                    
+                </ul> 
             </div>
         </header>
+ 
+        </nav>
+        
     )
 
 } 
