@@ -3,6 +3,7 @@ import Circle from './MooScore';
 import ReportInfo from './ReportInfo';
 import styles from './styles/Report.module.css';
 import cow from '../assets/cow_search.png';
+import Tooltip from './Tooltip';
 function Report(data){
     return(
         <div className = {styles.report}>
@@ -45,7 +46,7 @@ function Report(data){
             </div>
             <div className = {styles.bottom}>
             <div className= {styles.mortgagec}>
-             
+             <Tooltip/>
               
               
             </div>
@@ -53,4 +54,3 @@ function Report(data){
         </div>
     )
 }
-export default Report;
