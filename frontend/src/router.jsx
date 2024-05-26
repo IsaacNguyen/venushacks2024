@@ -6,9 +6,12 @@ import QuizPage from './pages/pages/QuizPage.jsx';
 import KeyPage from './pages/pages/KeyPage.jsx';
 import Tests from './pages/Tests.jsx'
 import Graph from './pages/Graph.jsx'
+import VerifyPage from './pages/Verify.jsx'
+import NotVerifiedPage from './pages/NotVerifiedPage.jsx';
 import {
     createBrowserRouter
   } from "react-router-dom";
+import NotVerifedPage from './pages/NotVerifiedPage.jsx';
 
  
 
@@ -19,12 +22,20 @@ import {
       
     }, 
     {
-      path: '/q',
+      path: '/report',
       element: <ReportPage/>,
     },
     {
       path:'/key',
       element: <KeyPage/>,
+    },
+    {
+      path: '/quiz',
+      element: <QuizPage/>,
+    },
+    {
+      path: '/verified',
+      element: <VerifyPage/>,
     },
     {
       path:'/address',
@@ -38,9 +49,8 @@ import {
       path:'/graph',
       element: <Graph/>,
     },
-  
     {
-      path: '/quiz',
-      element: <QuizPage/>,
-    },
+      path:'/notverified',
+      element: <NotVerifedPage/>,
+    }
   ]);

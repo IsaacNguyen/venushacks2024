@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles/Circle.module.css';
 
-const Circle = ({highlighted }) => {
+const MooScore = ({highlighted }) => {
   return (
     <div className={styles.circle}>
       {Array.from({ length: 100 }, (_, i) => (
@@ -11,4 +11,4 @@ const Circle = ({highlighted }) => {
   );
 };
 
-export default Circle;
+export default MooScore;

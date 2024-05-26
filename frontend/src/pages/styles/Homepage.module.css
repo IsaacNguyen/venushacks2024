@@ -41,6 +41,7 @@ button{
     cursor: pointer;
     transition: all 0.3s ease;
     width: 50%;
+    margin-top: 12px;
 }
 .home .butt{
     padding-left: 5px;
