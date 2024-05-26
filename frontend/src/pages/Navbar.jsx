@@ -9,15 +9,15 @@ function Navbar(){
         <header>
             <div class = 'nav-links'>
                 <ul> 
-                    <a href = '/'>
+                    
                     <div class = 'logo'>
-                       <li><img src={cow}></img></li>
+                       <li><a href = '/'><img src={cow}></img></a></li>
                        
                     </div>
                     <div class = 'name'>
-                    <li><b>moove</b></li>
+                    <li><a href = '/'><b>moove</b></a></li>
                     </div>
-                    </a>
+                    
                     
                 </ul> 
             </div>
