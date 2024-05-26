@@ -2,10 +2,10 @@
 import Main from './pages/pages/Main.jsx';
 import AddressInput from './pages/AddressInput.jsx';
 import ReportPage from './pages/ReportPage.jsx';
-import QuizPage from './pages/QuizPage.jsx';
-import KeyPage from './pages/KeyPage.jsx';
 import Tests from './pages/Tests.jsx'
 import Graph from './pages/Graph.jsx'
+import QuizPage from './pages/pages/QuizPage.jsx';
+import KeyPage from './pages/pages/KeyPage.jsx';
 import {
     createBrowserRouter
   } from "react-router-dom";
