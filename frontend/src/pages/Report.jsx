@@ -8,71 +8,72 @@ import cow from '../assets/cow_search.png';
 import house from '../assets/180047825_2.jpg'
 import Tooltip from './Tooltip';
 
-const propData = JSON.parse(localStorage.getItem('propertyData'))
-const baths = propData.Records[0].IntRoomInfo.BathCount;
-const beds = propData.Records[0].IntRoomInfo.BedroomsCount;
-const sqft = propData.Records[0].PropertySize.AreaBuilding;
-const stories = propData.Records[0].IntRoomInfo.StoriesCount;
-const owner = propData.Records[0].PrimaryOwner.Name1Full;
-
-const defaultYear = "N/A";
-const defaultValue = 0;
-
-function getLabelOrDefault(record, path, defaultValue) {
-    return path.reduce((acc, key) => (acc && acc[key] !== undefined) ? acc[key] : defaultValue, record);
-}
-
-function getDataOrDefault(record, path, defaultValue) {
-    const value = path.reduce((acc, key) => (acc && acc[key] !== undefined) ? acc[key] : defaultValue, record);
-    return typeof value === 'number' ? value : +value;
-}
-
-const valuationYear = getLabelOrDefault(propData.Records[0], ['EstimatedValue', 'ValuationDate'], defaultYear).slice(0, 4);
-const yearAssessed = getLabelOrDefault(propData.Records[0], ['Tax', 'YearAssessed'], defaultYear);
-const lastSaleDate = getLabelOrDefault(propData.Records[0], ['SaleInfo', 'AssessorLastSaleDate'], defaultYear).slice(0, 4);
-const futureYear = String(+valuationYear + 5);
-
-const estimatedValue = getDataOrDefault(propData.Records[0], ['EstimatedValue', 'EstimatedValue'], defaultValue);
-const assessedValueTotal = getDataOrDefault(propData.Records[0], ['Tax', 'AssessedValueTotal'], defaultValue);
-const lastSaleAmount = getDataOrDefault(propData.Records[0], ['SaleInfo', 'AssessorLastSaleAmount'], defaultValue);
-const futureValue = (estimatedValue - assessedValueTotal) * (1 + 0.04) ** 5 + estimatedValue;
-
-const calculateMortgage = (interest, years, principal_amount) => {
-    const a = ((interest/100)/12) * Math.pow((1+((interest/100)/12)), (years * 12));
-    console.log(a)
-    const b = (Math.pow(1 + ((interest/100)/12), (years * 12)) - 1);
-    console.log(b)
-    console.log(principal_amount)
-    return principal_amount * (a/b);
-}
-
-const thirtyYearMort = calculateMortgage(7.783, 30, + estimatedValue).toFixed(2);
-
-const thirtyYearMortFHA = calculateMortgage(7.08, 30, + estimatedValue).toFixed(2);
-
-const fifteenYearMort = calculateMortgage(7.03, 15, + estimatedValue).toFixed(2);
-
-
-const calculateScore = (pV, pS) => {
-    const price = + pV;
-    const sqft = + pS;
-    const idealFutureValue = price * Math.pow(1.05,5);
-    const idealSqft = 2299;
-    const futureValueScore = futureValue / idealFutureValue;
-    const sqftScore = 1 - Math.abs(sqft - idealSqft) / idealSqft;
-    console.log(sqftScore);
-    console.log(futureValueScore);
-    const weights = { price: 4, futureValue: 4 };
-    console.log(weights.price);
-    const totalScore = (futureValueScore * 0.5) + (sqftScore * .4);
-    console.log(totalScore);
-  
-    return Math.round(Math.max(0, Math.min(totalScore, 1)) * 100); // Scale to 0-100, ensure score is within bounds
-  };
-const score = calculateScore(estimatedValue, sqft);
-  
 function Report(data){
-    const [mortgage, setMortgage] = useState('');
+        
+    const propData = JSON.parse(localStorage.getItem('propertyData'))
+    const baths = propData.Records[0].IntRoomInfo.BathCount;
+    const beds = propData.Records[0].IntRoomInfo.BedroomsCount;
+    const sqft = propData.Records[0].PropertySize.AreaBuilding;
+    const stories = propData.Records[0].IntRoomInfo.StoriesCount;
+    const owner = propData.Records[0].PrimaryOwner.Name1Full;
+
+    const defaultYear = "N/A";
+    const defaultValue = 0;
+
+    function getLabelOrDefault(record, path, defaultValue) {
+        return path.reduce((acc, key) => (acc && acc[key] !== undefined) ? acc[key] : defaultValue, record);
+    }
+
+    function getDataOrDefault(record, path, defaultValue) {
+        const value = path.reduce((acc, key) => (acc && acc[key] !== undefined) ? acc[key] : defaultValue, record);
+        return typeof value === 'number' ? value : +value;
+    }
+
+    const valuationYear = getLabelOrDefault(propData.Records[0], ['EstimatedValue', 'ValuationDate'], defaultYear).slice(0, 4);
+    const yearAssessed = getLabelOrDefault(propData.Records[0], ['Tax', 'YearAssessed'], defaultYear);
+    const lastSaleDate = getLabelOrDefault(propData.Records[0], ['SaleInfo', 'AssessorLastSaleDate'], defaultYear).slice(0, 4);
+    const futureYear = String(+valuationYear + 5);
+
+    const estimatedValue = getDataOrDefault(propData.Records[0], ['EstimatedValue', 'EstimatedValue'], defaultValue);
+    const assessedValueTotal = getDataOrDefault(propData.Records[0], ['Tax', 'AssessedValueTotal'], defaultValue);
+    const lastSaleAmount = getDataOrDefault(propData.Records[0], ['SaleInfo', 'AssessorLastSaleAmount'], defaultValue);
+    const futureValue = (estimatedValue - assessedValueTotal) * (1 + 0.04) ** 5 + estimatedValue;
+
+    const calculateMortgage = (interest, years, principal_amount) => {
+        const a = ((interest/100)/12) * Math.pow((1+((interest/100)/12)), (years * 12));
+        console.log(a)
+        const b = (Math.pow(1 + ((interest/100)/12), (years * 12)) - 1);
+        console.log(b)
+        console.log(principal_amount)
+        return principal_amount * (a/b);
+    }
+
+    const thirtyYearMort = calculateMortgage(7.783, 30, + estimatedValue).toFixed(2);
+
+    const thirtyYearMortFHA = calculateMortgage(7.08, 30, + estimatedValue).toFixed(2);
+
+    const fifteenYearMort = calculateMortgage(7.03, 15, + estimatedValue).toFixed(2);
+
+
+    const calculateScore = (pV, pS) => {
+        const price = + pV;
+        const sqft = + pS;
+        const idealFutureValue = price * Math.pow(1.05,5);
+        const idealSqft = 2299;
+        const futureValueScore = futureValue / idealFutureValue;
+        const sqftScore = 1 - Math.abs(sqft - idealSqft) / idealSqft;
+        console.log(sqftScore);
+        console.log(futureValueScore);
+        const weights = { price: 4, futureValue: 4 };
+        console.log(weights.price);
+        const totalScore = (futureValueScore * 0.5) + (sqftScore * .4);
+        console.log(totalScore);
+    
+        return Math.round(Math.max(0, Math.min(totalScore, 1)) * 100); // Scale to 0-100, ensure score is within bounds
+    };
+    const score = calculateScore(estimatedValue, sqft);
+    
+        const [mortgage, setMortgage] = useState('');
     
     const handleChange = (e) => {
         setMortgage(e.target.value);
