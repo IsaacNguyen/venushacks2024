@@ -1,47 +1,49 @@
-body {
-    margin: 0;
-    padding: 20px;
-    width: 100%;
-    height: auto;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Poppins", sans-serif;
 
-}
 
-.report{
+
+.report {
+    background-color: rgb(66, 66, 66);
+    border-radius: 21px;
     width: 100%;
+    font-family: 'Poppins', sans-serif;
+
+    height: 100%;
     display: flex;
     flex-direction: column;
     margin: 20px;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding-left: 20px;
-
+    padding: 20px; /* More uniform padding */
+    position: relative; 
+    margin-top:95%;
 }
-.title{
+
+.report .title h1{
+    
     flex:1;
-    font-size: 24px;
+    width: 100%; 
+    font-size: 45px;
     font-weight: bold;
-    margin-bottom: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+    height:auto;
 
 }
-.top{
-    display: flex;
+.report .top{
     flex:5;
+    display: flex;
     width: 100%;
     flex-direction: row;
     margin-bottom: 20px;
 
 }
 
-.info{
+.report .info{
     flex: 2;
     display: flex;
     flex-direction: row;
 }
-.linfo, .rinfo{
+.report .linfo,.report .rinfo{
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -51,20 +53,67 @@ body {
     align-items:center;
     justify-content: center;
 }
+.report .topl{
+    flex:2;
+    display: flex;
+    flex-direction: column;
+   
+}
 
-
-.topr{
+.report .topr{
     flex:1;
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    gap: 20px;
 }
-.score{
+.report .score{
     flex:1;
 }
-.bottom{
+.report .cow{
+    flex:1;
+    max-width: 500px;
+}
+
+.report .projectedv{
+    flex:1;
+}
+.report .bottom{
     flex:4;
-    background-color: lightgrey;
+
     width: 100%;
     height: 100%;
+    
 }
+.report .mortgagec {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    height: 500px;
+    border-radius: 21px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+ .report .photos {
+    
+    background-color: #eee; /* Placeholder for photos */
+    height: 500px; /* Adjust as needed */
+    width: 95%;
+    padding: 0;
+    border-radius: 21px;
+    
+    padding-right: 2%;
+    
+  }
+ .report .score,.report .cow, .report .projectedv {
+    background-color: #fff;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }

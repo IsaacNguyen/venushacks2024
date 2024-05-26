@@ -1,19 +1,24 @@
 html, body {
-    height: 100vh; /* 100% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+       height: 100%; /* 100% of the viewport height */
+    width: 100%; /* 100% of the viewport width */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
+    border:0;
     overflow:auto;
 }
 
 
-h1{
+.home h1{
     font-size: 90px;
     padding:0;
     margin: 0;
     border:0;
     color: white;
 }
-p{
+.home p{
     font-size: 24px;
     margin: 0;
     padding: 20px;
@@ -25,8 +30,8 @@ p{
 }
 button{
     font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-weight: 550;
+    font-style:normal;
     font-size: 20px;
     background-color: #BEE9AC;
     color: black;
@@ -37,18 +42,18 @@ button{
     transition: all 0.3s ease;
     width: 50%;
 }
-.butt{
+.home .butt{
     padding-left: 5px;
 }
 button:hover{
-    background-color: #535bf2;
+    background-color: #83b46dfd;
 }
-img{
+.home img{
     width: 75%;
     height: auto;
     border-radius: 0;
 }
-.pic{
+.home .pic{
     flex:2;
     display: flex;
     justify-content: center;
@@ -66,7 +71,7 @@ img{
     padding: 20px;
     min-width:400px;
 }
-.text{
+.home .text{
     text-align: left;
     font-family: "Poppins", sans-serif;
     font-weight: 400;

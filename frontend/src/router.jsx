@@ -6,8 +6,8 @@ import SellerKey from './pages/SellerKey.jsx';
 import Main from './pages/Main.jsx';
 import AddressInput from './pages/AddressInput.jsx';
 import ReportPage from './pages/ReportPage.jsx';
-import QuizPage from './pages/QuizPage.jsx';
-import KeyPage from './pages/KeyPage.jsx';
+import QuizPage from './pages/pages/QuizPage.jsx';
+import KeyPage from './pages/pages/KeyPage.jsx';
 import Tests from './pages/Tests.jsx'
 import Graph from './pages/Graph.jsx'
 import VerifyPage from './pages/Verify.jsx'
@@ -22,6 +22,7 @@ import NotVerifedPage from './pages/NotVerifiedPage.jsx';
     {
       path: "/",
       element: <Main/>,
+      
     }, 
     {
       path: '/q',
