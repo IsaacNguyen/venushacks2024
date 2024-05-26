@@ -1,6 +1,4 @@
 
-import Main from './pages/Main.jsx'
-import AddressInput from './pages/AddressInput.jsx'
 import SellerVerification from './pages/SellerVerification.jsx';
 import SellerKey from './pages/SellerKey.jsx';
 import Main from './pages/Main.jsx';
@@ -24,7 +22,7 @@ import NotVerifedPage from './pages/NotVerifiedPage.jsx';
       element: <Main/>,
     }, 
     {
-      path: '/q',
+      path: '/report',
       element: <ReportPage/>,
     },
     {

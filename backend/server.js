@@ -74,7 +74,6 @@ app.get('/verify', async (req, res) => {
         console.log(address, key)
         const keysRef = db.collection('keys');
         const q = await keysRef.where('address','==',address).where('key','==', key).get();
-        console.log(q)
 
         if (q.empty) {
             res.status(404).json({ message: "Key not found for the specified address" });
