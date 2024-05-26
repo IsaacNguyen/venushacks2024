@@ -73,14 +73,18 @@ app.get('/verify', async (req, res) => {
     try {
         console.log(address, key)
         const keysRef = db.collection('keys');
-        const q = await keysRef.where('address','==',address).get();
+        const q = await keysRef.where('address','==',address).where('key','==', key).get();
         console.log(q)
 
-        if (q) {
+        if (q.empty) {
             res.status(404).json({ message: "Key not found for the specified address" });
         } else {
             res.status(200).json({ message: "Key found for the specified address" });
+            q.forEach(doc => {
+                console.log(doc.id, '=>', doc.data())
+            })
         }
+
     } catch (error) {
         console.error('Error verifying key:', error);
         res.status(500).json({ error: 'An error occurred' });
@@ -142,11 +146,12 @@ app.post('/upload_key', async (req, res) => {
         return res.status(400).json({ error: "Address and key are required" });
     }
     try {
-        // await addDoc(collection(db, "keys"), {
-        //     address: address,
-        //     key: key,
-        //     timestamp: new Date()
-        // });
+        const keyRef = db.collection('keys');
+        await keyRef.doc(key).set({
+                key: key,
+                address: address,
+                timestamp: new Date()
+            });
         res.status(200).json({ message: "Key uploaded successfully" });
     } catch (error) {
         console.error("Error uploading key to Firestore:", error);
