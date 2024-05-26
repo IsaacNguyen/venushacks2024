@@ -23,6 +23,9 @@ One of the core features of Moove is its ability to provide a detailed rundown o
 
 ### APIs
 - Melissa Data API: Moove leverages the Melissa Data API for accurate retrieval of house data and ownership verification.
+- Google Street View API: We used it to get images of the houses but we stopped because it was charging us :(
+
+### Database
 - Firebase: Firebase is utilized for storing ownership keys securely in the cloud, ensuring seamless access across different projects.
 
 ## Getting Started
