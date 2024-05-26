@@ -16,12 +16,20 @@ function Quiz(){
     };
 
     const [inputValue, setInputValue] = react.useState('');
+    const [errorMessage, setErrorMessage]  = react.useState('');
 
     const nextQuestion = () => {
-        setInputValue('');
+        console.log(inputValue)
+        if (!inputValue){
+            setErrorMessage('please input a valid input!')
+        }
+        else {
+            setErrorMessage('')
+            setInputValue('');
         
-        if(currentQuestionIndex+1 < questions.length){
-            setQuestionIndex(currentQuestionIndex+1);
+            if(currentQuestionIndex+1 < questions.length){
+                setQuestionIndex(currentQuestionIndex+1);
+            }
         }
     };
     const handleKeyPress = (e) => {
@@ -49,7 +57,10 @@ function Quiz(){
                     <h1>{question.text}</h1>
                 </div>
                 <div className = {styles.input}>
-                <input type={question.type} value={inputValue} onChange={(e) => setInputValue(e.target.value)} onKeyDown={handleKeyPress} ref={(input) => input && input.focus()} maxLength={250}/>
+                    <input type={question.type} value={inputValue} onChange={(e) => setInputValue(e.target.value)} onKeyDown={handleKeyPress} ref={(input) => input && input.focus()} maxLength={250}/>
+                </div>
+                <div className = {styles.error}>
+                    <p>{errorMessage}</p>
                 </div>
                 <div className = {styles.continue}>
                     <button onClick={nextQuestion}>continue</button>
