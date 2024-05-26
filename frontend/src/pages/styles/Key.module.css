@@ -55,6 +55,15 @@
     width: calc(100% - 22px); /* Calculates width to fit container with padding */
 }
 
+.keypassword {
+    padding: 10px;
+    margin-left: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    width: calc(100% - 22px); /* Calculates width to fit container with padding */
+}
+
 /* Submit button styling */
 .key button {
     background-color: #5a5b74;

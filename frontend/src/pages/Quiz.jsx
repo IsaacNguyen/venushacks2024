@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import cow from '../assets/cow_car.png';
-import styles from './styles/Quiz.module.css';
-import { useNavigate } from 'react-router-dom';
+import cow from '../assets/cow-draw.gif'
+import styles from './styles/Quiz.module.css'
+import { useNavigate } from 'react-router-dom'
 
 function Quiz() {
   const [currentQuestionIndex, setQuestionIndex] = useState(0);
@@ -28,7 +28,7 @@ function Quiz() {
       const response = await fetch(`http://localhost:3000/property?address=${address}`);
       const result = await response.json();
       localStorage.setItem('propertyData', JSON.stringify(result));
-      //console.log(JSON.stringify(result))
+      console.log(JSON.stringify(result))
       
     } catch (err) {
       setError('Issue retrieving address data. Try again');

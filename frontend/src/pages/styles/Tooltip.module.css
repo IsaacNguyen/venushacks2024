@@ -1,0 +1,22 @@
+.tooltip {
+    position: fixed;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    pointer-events: none; /* Prevents the tooltip from interfering with mouse events */
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+   word-wrap: break-word; /* Ensures text wraps within the box */
+    white-space: normal; /* Override if there's any other CSS setting this property */
+}
+.tooltip h2{
+    font-size: 20px;
+    margin: 0;
+}
+
+.target:hover{
+    text-decoration: underline;
+}

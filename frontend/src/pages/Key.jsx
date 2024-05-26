@@ -47,13 +47,13 @@ function Key() {
             if (owners.includes(name)){
                 const key = generateRandomString(12);
                 console.log(key);
-                setReturnName('your key is: ' + key);
+                setReturnName('your milKEY is: ' + key);
                 setKey(key);
                 uploadKey(address, key);
             }
             else {
                 console.log('fail!')
-                setReturnName('failure to verify you');
+                setReturnName('Could not verify you');
             }
 
         } catch (err) {
@@ -111,7 +111,7 @@ function Key() {
                 <p>
                     SSN:
                     <input
-                        type="text"
+                        type="password"
                         name="ssn"
                         value={ssn}
                         onChange={handleSSNChange}
@@ -120,7 +120,7 @@ function Key() {
                 </p>
                 <button type="submit">Generate Key</button>
             </form>
-            <div></div>
+            <div>{returnName}</div>
             </div>
             <div className={styles.keyImage}>
                 <img src={cow} alt="Key" />

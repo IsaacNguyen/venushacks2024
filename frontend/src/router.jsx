@@ -13,11 +13,13 @@ import {
   } from "react-router-dom";
 import NotVerifedPage from './pages/NotVerifiedPage.jsx';
 
+ 
 
   export const router = createBrowserRouter([
     {
       path: "/",
       element: <Main/>,
+      
     }, 
     {
       path: '/report',

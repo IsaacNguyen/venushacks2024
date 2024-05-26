@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './styles/Circle.module.css';
 
-const MooScore = ({highlighted }) => {
+const Circle = ({highlighted }) => {
   return (
-    <div className={styles.circle-container}>
+    <div className={styles.circle}>
       {Array.from({ length: 100 }, (_, i) => (
         <div key={i} className={`segment ${i < highlighted ? 'highlighted' : ''}`}></div>
       ))}
@@ -11,4 +11,4 @@ const MooScore = ({highlighted }) => {
   );
 };
 
-export default MooScore;
+export default Circle;
