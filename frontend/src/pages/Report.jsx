@@ -1,33 +1,33 @@
 import react from 'react'
 
 import ReportInfo from './ReportInfo'
-import './styles/Report.module.css'
+import styles from './styles/Report.module.css'
 function Report(){
     return(
-        <div class = 'report'>
-            <div class = 'title'>
+        <div className = {styles.report}>
+            <div className = {styles.title}>
                 <h1></h1>
             </div>
-            <div class = 'top'>
-                <div class = 'top-l'>
-                    <div class = 'photos'>
+            <div className = {styles.top}>
+                <div className = {styles.topl}>
+                    <div className = {styles.photos}>
                         <p>home photos</p>
                     </div>
-                    <div class = 'info'>
-                        <div class = 'l-info'>
+                    <div className = {styles.info}>
+                        <div className = {styles.linfo}>
                             <ReportInfo text = 'sqft'/>
                             <ReportInfo text = 'beds'/>
                             <ReportInfo text = 'baths'/>
                         </div>
-                        <div class = 'r-info'>
+                        <div className = {styles.rinfo}>
                             <ReportInfo text = 'stories'/>
                             <ReportInfo text = 'owner'/>
                             <ReportInfo text = 'detail'/>
                         </div>
                     </div>
                 </div>
-                <div class = 'top-r'>
-                    <div class = 'score'>
+                <div className = {styles.topr}>
+                    <div className = {styles.score}>
                         <h2>mooscore</h2>
                         <h2>project value</h2>
                         <img></img>
@@ -35,7 +35,7 @@ function Report(){
                 </div>
 
             </div>
-            <div class = 'bottom'>
+            <div className = {styles.bottom}>
                 <h2>mortgage plan</h2>
             </div>
             

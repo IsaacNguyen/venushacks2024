@@ -1,9 +1,9 @@
-import react from 'react';
-import './styles/ReportInfo.css';
+
+import styles from './styles/ReportInfo.module.css';
 function ReportInfo({text}){
     return(
-        <div class = 'report1'>
-            <h1>{text}</h1>
+        <div className = {styles.report1}>
+            <p>{text}</p>
         </div>
     )
 }

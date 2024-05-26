@@ -13,12 +13,13 @@ nav ul{
     list-style: none;
     display: flex; 
     justify-content: flex-start;
-    padding-top: 5px;
+
     flex-direction: row;
     gap: 0;
     padding: 0;
     margin: 0;
-
+    
+    align-items: center;
 }
 
 nav li{
@@ -32,6 +33,7 @@ nav li{
 .name{
     padding: 0;
     padding-top:0;
+    padding-bottom:10px;
     
 }
 
@@ -39,7 +41,7 @@ nav li{
    
     padding: 0;
     padding-left: 25px;
-
+    border: 0;
     margin: 0;
     height: auto;
     width: 82px;
