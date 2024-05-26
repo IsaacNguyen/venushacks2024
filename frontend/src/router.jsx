@@ -28,7 +28,7 @@ import {
       path:'/key',
       element: <KeyPage/>,
     },
-   {/* {
+    {
       path:'/address',
       element: <AddressInput/>,
     },
@@ -40,11 +40,9 @@ import {
       path:'/graph',
       element: <Graph/>,
     },
-    },
   
     {
       path: '/quiz',
       element: <QuizPage/>,
-    }
-    */},
+    },
   ]);

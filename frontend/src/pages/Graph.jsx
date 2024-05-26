@@ -72,6 +72,6 @@ why you can trust Moove to protect your next purchase through our SSN and name v
 /*
 Housing markets are MOOving all the time! That's why Moove analyzes trends in housing 
 market data for you, so you can make the MOOst MOOvelous decisions with your hard-earned
-MOOney!
+MOOlah!
 */
 

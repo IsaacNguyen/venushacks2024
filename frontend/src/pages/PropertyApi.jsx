@@ -20,6 +20,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     callApi(address);
+    setPropertyData(JSON.parse(localStorage.getItem('propertyData')));
   };
 
   const callApi = (ff) => {
