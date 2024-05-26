@@ -1,14 +1,14 @@
-import Verify from './Verify';
+import NotVerified from './NotVerified';
 import React from 'react';
 import Navbar from './Navbar';
 
-function VerifyPage() {
+function NotVerifiedPage() {
     return (
         <div>
             <Navbar />
-            <Verify />
+            <NotVerified />
         </div>
     );
 }
 
-export default VerifyPage;
+export default NotVerifiedPage;

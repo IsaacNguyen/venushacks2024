@@ -6,9 +6,12 @@ import QuizPage from './pages/QuizPage.jsx';
 import KeyPage from './pages/KeyPage.jsx';
 import Tests from './pages/Tests.jsx'
 import Graph from './pages/Graph.jsx'
+import VerifyPage from './pages/Verify.jsx'
+import NotVerifiedPage from './pages/NotVerifiedPage.jsx';
 import {
     createBrowserRouter
   } from "react-router-dom";
+import NotVerifedPage from './pages/NotVerifiedPage.jsx';
 
 
   export const router = createBrowserRouter([
@@ -32,7 +35,7 @@ import {
       path: '/verify',
       element: <VerifyPage/>,
     },
-   {/* {
+    {
       path:'/address',
       element: <AddressInput/>,
     },
@@ -44,9 +47,8 @@ import {
       path:'/graph',
       element: <Graph/>,
     },
-  
     {
-      path: '/quiz',
-      element: <QuizPage/>,
-    },
+      path:'/notverified',
+      element: <NotVerifedPage/>,
+    }
   ]);

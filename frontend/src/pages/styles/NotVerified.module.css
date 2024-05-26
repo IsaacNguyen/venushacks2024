@@ -18,7 +18,7 @@ h1{
     margin: 0;
     border:0;
     color: white;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 p{
