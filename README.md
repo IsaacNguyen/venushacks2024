@@ -1,4 +1,4 @@
-# Moove: College Moving Aid App
+# Moove: It's The Moove
 
 ## Introduction
 Moove is a comprehensive app designed to streamline the moving-out process for college students. It offers two primary functionalities: ownership authentication and property rundown. By utilizing modern web technologies and powerful APIs, Moove aims to provide accurate and efficient assistance to users.
