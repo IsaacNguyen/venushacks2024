@@ -26,6 +26,10 @@ import {
       path: '/quiz',
       element: <QuizPage/>,
     },
+    {
+      path: '/verify',
+      element: <VerifyPage/>,
+    },
    {/* {
       path:'/address',
       element: <AddressInput/>,
