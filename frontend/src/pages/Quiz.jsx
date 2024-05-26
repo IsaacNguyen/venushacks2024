@@ -1,6 +1,6 @@
 import react from 'react'
 import cow from '../assets/cow_car.png'
-import './styles/Quiz.module.css'
+import styles from './styles/Quiz.module.css'
 
 function Quiz(){
     const[currentQuestionIndex, setQuestionIndex] = react.useState(0);
@@ -35,14 +35,14 @@ function Quiz(){
     return(
         <>
         <div style= {{display: 'flex', justifyContent: 'center'}}>
-            <div class = 'quiz'>
-                <div class = 'question'>
+            <div className = {styles.quiz}>
+                <div className = {styles.question}>
                     <h1>{question.text}</h1>
                 </div>
                 <input type = {question.type} onKeyDown={handleKeyPress}   ref={(input) => input && input.focus()} maxlength = {250}/>
             </div>
 
-            <div class = 'pic'>
+            <div className = {styles.pic}>
                 <img src={cow}></img>
             </div>
         </div>

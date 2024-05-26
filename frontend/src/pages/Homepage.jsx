@@ -1,7 +1,7 @@
 import react from 'react'
-import './styles/Homepage.module.css'
+import './styles/Homepage.css'
 import cow from '../assets/cow-ani.gif'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 
 
 function Homepage(){
@@ -13,7 +13,7 @@ function Homepage(){
 
     return(
         <>
-        <div class = 'home' className={styles.home}>
+        <div class = 'home'>
         <div class='text'> 
             <h1><b>moove</b></h1>
             <p>helping college students moove out since 2024</p>
