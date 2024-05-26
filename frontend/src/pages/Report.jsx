@@ -1,5 +1,5 @@
 import react from 'react'
-
+import Circle from './Circle';
 import ReportInfo from './ReportInfo';
 import styles from './styles/Report.module.css';
 function Report(data){
@@ -29,7 +29,7 @@ function Report(data){
                 <div className = {styles.topr}>
                     <div className = {styles.score}>
                         <h2>mooscore</h2>
-                        
+                        <Circle highlighted={data.score}/>
                         <img></img>
                     </div>
                     <div className = {styles.projectedv}>
