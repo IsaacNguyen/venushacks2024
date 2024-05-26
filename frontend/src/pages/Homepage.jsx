@@ -1,5 +1,5 @@
 import react from 'react'
-import './styles/Homepage.css'
+import './styles/Homepage.module.css'
 import cow from '../assets/cow-ani.gif'
 import { useNavigate } from 'react-router-dom';
 
