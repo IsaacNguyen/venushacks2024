@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 function AddressInput() {
   const [address, setAddress] = useState('');
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     setAddress(e.target.value);
@@ -12,22 +13,19 @@ function AddressInput() {
     callApi(address);
   };
 
-  const callApi = (ff) => {
-    console.log('hello');
-    var url = "https://property.melissadata.net/v4/WEB/LookupProperty/";
-    url += '?' + new URLSearchParams({
-      'id': "W9uSu_FdnwyRUm4XUkTwM0nSAcwXpxhQ0PC2lXxuDAZ-",
-      'cols': "GrpAll",
-      'format': "json",
-      'ff': ff
-    }).toString();
+  const callApi = async (address) => {
+    try{
+      const response = await fetch(`http://localhost:3000/property?address=${address}`);
+      const result = await response.json();
+      localStorage.setItem('propertyData', JSON.stringify(result));
+      const value = JSON.parse(localStorage.getItem('propertyData'));
+      console.log(value)
 
-    fetch(url, { method: 'GET' })
-      .then(response => response.json())
-      .then(result => {
-        console.log(result)
-    })
-      .catch(err => { throw err; });
+
+    } catch (err) {
+      setError('Issue retrieving address data. Try again');
+      console.log('ahhhh error')
+    }
   };
 
   return (
