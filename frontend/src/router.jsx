@@ -40,7 +40,7 @@ import {
       path:'/key-generate',
       element: <SellerKey/>
     },
-    
+    {
       path:'/tests',
       element: <Tests/>,
     },
