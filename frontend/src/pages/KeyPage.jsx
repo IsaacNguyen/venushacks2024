@@ -1,13 +1,12 @@
-import Report from './Report';
+import Key from './Key';
 import Navbar from './Navbar';
-
-function ReportPage() {
+function KeyPage() {
     return (
         <div>
             <Navbar />
-            <Report />
+            <Key />
         </div>
     )
 }
 
-export default ReportPage;
+export default KeyPage;

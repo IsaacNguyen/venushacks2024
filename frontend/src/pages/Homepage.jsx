@@ -1,7 +1,7 @@
-import react from 'react'
-import  styles from './styles/Homepage.module.css'
-import cow from '../assets/cow-ani.gif'
-import { useNavigate } from 'react-router-dom'
+
+import  styles from './styles/Homepage.module.css';
+import cow from '../assets/cow-ani.gif';
+import { useNavigate } from 'react-router-dom';
 
 
 function Homepage(){

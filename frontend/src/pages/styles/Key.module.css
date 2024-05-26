@@ -1,0 +1,90 @@
+/* Styles for the main container */
+.key {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   
+    margin: auto;
+    margin-top: 50px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Styles for the form container */
+.form {
+    flex:1;
+    background-color: #f4f4f8;
+    padding: 20px;
+    border-radius: 8px;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 33%;
+    flex:1;
+    margin-bottom: 20px;
+    margin-left: 8%;
+}
+
+/* Headings styling */
+.key h1 {
+    color: #333;
+    
+    font-size: 24px;
+}
+
+.key h2 {
+    color: #666;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+/* Paragraphs containing labels and inputs */
+.key p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #444;
+}
+
+/* Input field styling */
+.keyinput {
+    padding: 10px;
+    margin-left: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    width: calc(100% - 22px); /* Calculates width to fit container with padding */
+}
+
+/* Submit button styling */
+.key button {
+    background-color: #5a5b74;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.key button:hover {
+    background-color: #535bf2;
+}
+
+/* Styling for the image container */
+.keyImage {
+    flex:1;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 8%;
+}
+
+/* Image styling */
+.key img {
+    min-width: 400px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
