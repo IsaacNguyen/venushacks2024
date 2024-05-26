@@ -1,12 +1,13 @@
 import react from 'react'
-import Circle from './Circle';
+import Circle from './MooScore';
 import ReportInfo from './ReportInfo';
 import styles from './styles/Report.module.css';
+import cow from '../assets/cow_search.png';
 function Report(data){
     return(
         <div className = {styles.report}>
             <div className = {styles.title}>
-                <h1></h1>
+                <h1>your moove report</h1>
             </div>
             <div className = {styles.top}>
                 <div className = {styles.topl}>
@@ -29,22 +30,26 @@ function Report(data){
                 <div className = {styles.topr}>
                     <div className = {styles.score}>
                         <h2>mooscore</h2>
-                        <Circle highlighted={data.score}/>
+                        <Circle highlighted={78}/>
                         <img></img>
                     </div>
                     <div className = {styles.projectedv}>
                         <h2>project value</h2>
                     </div>
+                    <div className = {styles.cow}>
+                        <img src={cow}></img>
+                    </div>
+
                 </div>
 
             </div>
             <div className = {styles.bottom}>
             <div className= {styles.mortgagec}>
              
-              <small>what's a mortgage?</small>
-              </div>
+              
+              
             </div>
-            
+            </div>
         </div>
     )
 }

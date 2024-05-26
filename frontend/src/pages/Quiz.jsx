@@ -1,6 +1,6 @@
 import react from 'react'
 import React, { useState } from 'react';
-import cow from '../assets/cow_car.png'
+import cow from '../assets/cow-ani.gif'
 import styles from './styles/Quiz.module.css'
 import { useNavigate } from 'react-router-dom'
 
