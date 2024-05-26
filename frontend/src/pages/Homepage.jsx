@@ -21,7 +21,7 @@ function Homepage(){
             <button onClick={toAddressInput}>get started</button>
             </div>
         </div>
-        <div class = 'house'>
+        <div class = 'pic'>
             <img src={cow   }></img> 
         </div>
         </div>

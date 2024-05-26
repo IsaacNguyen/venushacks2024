@@ -11,6 +11,7 @@ h1{
     padding:0;
     margin: 0;
     border:0;
+    color: white;
 }
 p{
     font-size: 24px;
@@ -20,12 +21,15 @@ p{
     padding-left: 2px;
 
     border: 0;
+    color: white;
 }
 button{
-    font-family: poppins;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 20px;
-    background-color: #5a5b74;
-    color: white;
+    background-color: #BEE9AC;
+    color: black;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -44,7 +48,7 @@ img{
     height: auto;
     border-radius: 50%;
 }
-.house{
+.pic{
     flex:2;
     display: flex;
     justify-content: center;
@@ -66,7 +70,7 @@ img{
     text-align: left;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    font-style: normal;;
+    font-style: normal;
     flex: 1;    
     display: flex;
     flex-direction: column;
