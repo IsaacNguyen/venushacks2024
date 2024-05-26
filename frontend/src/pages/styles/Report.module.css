@@ -6,7 +6,7 @@
     border-radius: 21px;
     width: 100%;
     font-family: 'Poppins', sans-serif;
-
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -30,6 +30,7 @@
 
 }
 .report .top{
+    
     flex:5;
     display: flex;
     width: 100%;
@@ -91,10 +92,11 @@
     border-radius: 10px;
     height: 500px;
     border-radius: 21px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,1);
   }
   
  .report .photos {
+    box-shadow: 0 4px 8px rgba(0,0,0,1);
     
     background-color: #eee; /* Placeholder for photos */
     height: 500px; /* Adjust as needed */
@@ -109,7 +111,7 @@
     background-color: #fff;
     padding: 0px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,1);
     width: 330px;
     display: flex;
     flex-direction: column;
