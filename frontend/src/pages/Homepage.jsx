@@ -1,5 +1,5 @@
 import react from 'react'
-import styles from './styles/Homepage.css'
+import './styles/Homepage.module.css'
 import cow from '../assets/cow-ani.gif'
 import { useNavigate } from 'react-router-dom';
 
@@ -21,7 +21,7 @@ function Homepage(){
             <button onClick={toAddressInput}>get started</button>
             </div>
         </div>
-        <div class = 'house'>
+        <div class = 'pic'>
             <img src={cow   }></img> 
         </div>
         </div>

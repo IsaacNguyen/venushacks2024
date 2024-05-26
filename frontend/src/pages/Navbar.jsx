@@ -5,9 +5,9 @@ import cow from '../assets/cow.png'
 function Navbar(){
     return(
         <nav>
+        <nav>
         <header>
             <div class = 'nav-links'>
-            
                 <ul>   
                     <div class = 'logo'>
                        <li><img src={cow}></img></li>
@@ -17,9 +17,9 @@ function Navbar(){
                     <li><b>moove</b></li>
                     </div>
                 </ul>
-            
             </div>
         </header>
+        </nav>
         </nav>
     )
 
