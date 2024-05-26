@@ -111,7 +111,7 @@ function Key() {
                 <p>
                     SSN:
                     <input
-                        type="text"
+                        type="password"
                         name="ssn"
                         value={ssn}
                         onChange={handleSSNChange}

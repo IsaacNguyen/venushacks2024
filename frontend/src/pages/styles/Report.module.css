@@ -29,6 +29,11 @@
     height:auto;
 
 }
+.report .score h3{
+    padding:0;
+    margin: 0;
+    font-size: 64px;
+}
 .report .top{
     
     flex:5;
@@ -74,6 +79,10 @@
 .report .cow{
     flex:1;
     max-width: 500px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    padding-left:0;
 }
 
 .report .projectedv{
@@ -87,12 +96,25 @@
     
 }
 .report .mortgagec {
+    flex:1;
     background-color: #fff;
     padding: 10px;
     border-radius: 10px;
-    height: 500px;
+    height: 100%;
     border-radius: 21px;
+    width: 1000px;
     box-shadow: 0 4px 8px rgba(0,0,0,1);
+    padding-left: 45px;
+  }
+  .report .mortgagec h3{
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+  } .report .mortgagec h2{
+    margin: 0;
+    padding: 20px;
+    font-size: 48px;
+    padding-left: 0;
   }
   
  .report .photos {
@@ -103,9 +125,17 @@
     width: 95%;
     padding: 0;
     border-radius: 21px;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-right: 2%;
     
+  }
+
+  .report .tip{
+    margin: 0;
+    padding: 0;
+    border: 0;
   }
  .report .score,.report .cow, .report .projectedv {
     background-color: #fff;
@@ -118,4 +148,48 @@
     align-items: center;
     justify-content: center;
     
+  }
+
+  .report .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border:none;
+    cursor:pointer;
+  }
+
+  .report .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .report .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .report .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+
+  /* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
   }
