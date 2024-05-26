@@ -7,11 +7,15 @@ import { useNavigate } from 'react-router-dom'
 function Quiz(){
     const[currentQuestionIndex, setQuestionIndex] = react.useState(0);
     const[answers, setAnswers] = react.useState({});
-    const questions = [{id: 1, text: "yearly income?", type: "number"}, {id: 2, text: "credit score?", type: "number"}, {id: 3, text: "address", type: "text"}, {id: 4, text: "who's selling?", type: "text"}, ];
+    const questions = [{id: 1, text: "yearly income?", type: "number"}, {id: 2, text: "credit score?", type: "number"}, {id: 3, text: "address", type: "text"}, {id: 4, text: "their milKEY?", type: "text"}, ];
     const submitAnswer = (answer) => {
+        console.log(currentQuestionIndex);
         if(answer.trim() !== ""){
             setAnswers({ ...answers, [questions[currentQuestionIndex].id]: answer });
             nextQuestion();
+        }
+        if(currentQuestionIndex == 3) {
+            navigate('/key')
         }
     };
 
@@ -30,7 +34,11 @@ function Quiz(){
             if(currentQuestionIndex+1 < questions.length){
                 setQuestionIndex(currentQuestionIndex+1);
             }
+            else {
+                navigate('/key')
+            }
         }
+        
     };
     const handleKeyPress = (e) => {
         if(e.key === 'Enter'){
