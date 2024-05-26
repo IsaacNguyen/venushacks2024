@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import cow from '../assets/cow_car.png';
-import styles from './styles/Quiz.module.css';
-import { useNavigate } from 'react-router-dom';
+import cow from '../assets/cow-ani.gif'
+import styles from './styles/Quiz.module.css'
+import { useNavigate } from 'react-router-dom'
 
 function Quiz() {
   const [currentQuestionIndex, setQuestionIndex] = useState(0);

@@ -19,6 +19,7 @@ import NotVerifedPage from './pages/NotVerifiedPage.jsx';
     {
       path: "/",
       element: <Main/>,
+      
     }, 
     {
       path: '/report',
