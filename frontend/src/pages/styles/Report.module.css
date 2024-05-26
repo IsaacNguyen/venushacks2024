@@ -73,6 +73,7 @@
 .report .cow{
     flex:1;
     max-width: 500px;
+    margin-left: 0;
 }
 
 .report .projectedv{
@@ -117,3 +118,10 @@
     justify-content: center;
     
   }
+
+ .report .cow img {
+    width: 75%;
+    height: auto;
+    border-radius: 0;
+    margin-left: 0;
+}

@@ -1,10 +1,6 @@
 
-import Main from './pages/Main.jsx'
-import AddressInput from './pages/AddressInput.jsx'
-import SellerVerification from './pages/SellerVerification.jsx';
+import Main from './pages/pages/Main.jsx'
 import SellerKey from './pages/SellerKey.jsx';
-import Main from './pages/Main.jsx';
-import AddressInput from './pages/AddressInput.jsx';
 import ReportPage from './pages/ReportPage.jsx';
 import QuizPage from './pages/pages/QuizPage.jsx';
 import KeyPage from './pages/pages/KeyPage.jsx';
@@ -25,7 +21,7 @@ import NotVerifedPage from './pages/NotVerifiedPage.jsx';
       
     }, 
     {
-      path: '/q',
+      path: '/report',
       element: <ReportPage/>,
     },
     {
@@ -39,14 +35,6 @@ import NotVerifedPage from './pages/NotVerifiedPage.jsx';
     {
       path: '/verify',
       element: <VerifyPage/>,
-    },
-    {
-      path:'/address',
-      element: <AddressInput/>,
-    },
-    {
-      path:'/verification',
-      element: <SellerVerification/>
     },
     {
       path:'/key-generate',

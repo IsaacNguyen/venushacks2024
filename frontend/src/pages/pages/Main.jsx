@@ -9,6 +9,6 @@ function Main() {
         <Navbar />
         <Homepage />
         </>
-    )
+    );
     }
 export default Main;
