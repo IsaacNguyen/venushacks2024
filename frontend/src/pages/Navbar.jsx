@@ -5,6 +5,7 @@ import cow from '../assets/cow.png'
 function Navbar(){
     return(
         <nav>
+        <nav>
         <header>
             <div class = 'nav-links'>
                 <ul>   
@@ -18,6 +19,7 @@ function Navbar(){
                 </ul>
             </div>
         </header>
+        </nav>
         </nav>
     )
 

@@ -1,7 +1,7 @@
 import react from 'react'
 
 import ReportInfo from './ReportInfo'
-import './styles/Report.css'
+import './styles/Report.module.css'
 function Report(){
     return(
         <div class = 'report'>
@@ -36,6 +36,7 @@ function Report(){
 
             </div>
             <div class = 'bottom'>
+                <h2>mortgage plan</h2>
             </div>
             
         </div>

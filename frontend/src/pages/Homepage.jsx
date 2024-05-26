@@ -13,7 +13,7 @@ function Homepage(){
 
     return(
         <>
-        <div class = 'home'>
+        <div class = 'home' className={styles.home}>
         <div class='text'> 
             <h1><b>moove</b></h1>
             <p>helping college students moove out since 2024</p>
