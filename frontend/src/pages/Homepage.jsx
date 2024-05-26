@@ -8,7 +8,7 @@ function Homepage(){
     
     const navigate = useNavigate();
     const toAddressInput = () => {
-        navigate('/address')
+        navigate('/quiz');
     }
 
     return(

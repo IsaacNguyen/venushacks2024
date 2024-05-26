@@ -21,6 +21,10 @@ import {
       element: <ReportPage/>,
     },
     {
+      path: '/quiz',
+      element: <QuizPage/>,
+    },
+    {
       path:'/key',
       element: <KeyPage/>,
     },

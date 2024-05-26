@@ -34,7 +34,7 @@ function Quiz(){
     const question = questions[currentQuestionIndex];
     return(
         <>
-        <div style= {{display: 'flex', justifyContent: 'center'}}>
+        <div className= {styles.center}>
             <div className = {styles.quiz}>
                 <div className = {styles.question}>
                     <h1>{question.text}</h1>
