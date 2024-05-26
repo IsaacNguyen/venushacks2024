@@ -22,7 +22,7 @@ h1{
 }
 
 p{
-    font-size: 24px;
+    font-size: 12px;
     font-family: 'Poppins', sans-serif;
     font-weight: 100px;
     padding:0;
@@ -30,6 +30,13 @@ p{
     border:0;
     border:0;
     color: white;
+}
+
+.error{
+    flex: 1;
+    align-self: flex-start;
+    margin-top: 10px;
+    padding-left: 50px;
 }
 
 .center{
@@ -66,7 +73,7 @@ p{
 .continue{
     flex:1;
     width: 50%;
-    margin-top: 40px;
+    margin-top: 20px;
     align-self: flex-start;
     padding-left: 50px;
 }
