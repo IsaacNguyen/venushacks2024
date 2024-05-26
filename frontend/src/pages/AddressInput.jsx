@@ -18,9 +18,6 @@ function AddressInput() {
       const response = await fetch(`http://localhost:3000/property?address=${address}`);
       const result = await response.json();
       localStorage.setItem('propertyData', JSON.stringify(result));
-      const value = JSON.parse(localStorage.getItem('propertyData'));
-      console.log(value)
-
 
     } catch (err) {
       setError('Issue retrieving address data. Try again');
@@ -40,6 +37,9 @@ function AddressInput() {
           <button type="submit">Search</button>
         </form>
       </header>
+      {!error && (
+        <div>{error}</div>
+      )}
     </div>
   );
 }
