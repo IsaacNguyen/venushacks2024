@@ -1,38 +1,27 @@
 import React, { useState } from 'react';
 
 function SellerVerification() {
-    const [seller, setSeller] = useState('');
+    const [key, setKey] = useState('');
     const [error, setError] = useState(null);
-    const propData = JSON.parse(localStorage.getItem('propertyData'));
 
-    const owners = [propData.Records[0].PrimaryOwner.Name1Full,
-                    propData.Records[0].PrimaryOwner.Name2Full]
-    
+
     const handleChange = (e) => {
-        setSeller(e.target.value);
+        setKey(e.target.value);
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (owners.includes(seller)){
-            console.log('winner!')
-            //localStorage.setItem('sellerAuthenticity', 'good!')
-        } else {
-            console.log('loser')
-            callApi(seller);
-            // if statements saying medium or bad
-        }
-        
+        const address = localStorage.getItem('currentAddress');
+        callApi(address, key);
     };
 
-    const callApi = async (seller_name) => {
+    const callApi = async (address, key) => {
         try{
-          const response = await fetch(`http://localhost:3000/verify?seller=${seller_name}`);
-          const result = await response.json();
-          localStorage.setItem('sellerName', JSON.stringify(result));
-          const value = JSON.parse(localStorage.getItem('sellerName'));
-          console.log(value)
-    
+            address = '1418 Old Janal Ranch Road Chula Vista, CA 91915'
+            const response = await fetch(`http://localhost:3000/verify?address=${address}&key=${key}`);
+            const data = await response.json(); // Parse response body as JSON
+            console.log(data); // Log the parsed JSON data
+            //return data; // Return the parsed JSON data
     
         } catch (err) {
           setError('Issue retrieving address data. Try again');
@@ -44,11 +33,11 @@ function SellerVerification() {
         <>
             <div className="App">
                 <header className="App-header">
-                    <h1>Verifying Your Seller's Name!</h1>
+                    <h1>Verifying Your Seller's Key!</h1>
                     <form onSubmit={handleSubmit}>
                     <label>
-                        Seller Name:
-                        <input type="text" value={seller} onChange={handleChange} required />
+                        Seller's Key:
+                        <input type="text" value={key} onChange={handleChange} required />
                     </label>
                     <button type="submit">Search</button>
                     </form>

@@ -1,13 +1,16 @@
-const express = require('express');
-const cors = require('cors');
-const axios = require('axios');
-const dotenv = require('dotenv');
+import express from 'express';
+import cors from 'cors';
+import axios from 'axios';
+import dotenv from 'dotenv';
+import  {db}  from './firebase.js';  // Importing the db instance
+import { getFirestore } from "firebase-admin/firestore";
 dotenv.config();
 
 const app = express()
 const port = 3000;
 
 app.use(cors()); 
+app.use(express.json());
 
 app.get("/property", async (req, res) => {
     const { address } = req.query;
@@ -35,29 +38,54 @@ app.get("/property", async (req, res) => {
     }
 });
 
-app.get('/verify', async (req, res) =>{
-    const { seller } = req.query;
+// app.get('/verify', async (req, res) =>{
+//     const { seller } = req.query;
 
-    if (!seller) {
-        return res.status(400).json({ error: "Seller is required" });
+//     if (!seller) {
+//         return res.status(400).json({ error: "Seller is required" });
+//     }
+
+//     const melissaNameURL = "https://globalname.melissadata.net/V3/WEB/GlobalName/doGlobalName/";
+//     const params ={
+//         'id': process.env.MELISSA_API_KEY,
+//         'format': "json",
+//         'full': seller
+//     };
+
+//     try {
+//         const response = await axios.get(melissaNameURL, {params});
+//         res.json(response.data);
+//         console.log('success finding name data!');
+//     } catch (error) {
+//         console.error('Could not fetch data from Melissa');
+//         res.status(500).json({erro: 'An error occurred'});
+//     }
+// })
+
+app.get('/verify', async (req, res) => {
+    const address = req.query.address;
+    const key = req.query.key;
+    console.log(address, key)
+    if (!address || !key) {
+        return res.status(400).json({ error: "Address and key are required" });
     }
-
-    const melissaNameURL = "https://globalname.melissadata.net/V3/WEB/GlobalName/doGlobalName/";
-    const params ={
-        'id': process.env.MELISSA_API_KEY,
-        'format': "json",
-        'full': seller
-    };
 
     try {
-        const response = await axios.get(melissaNameURL, {params});
-        res.json(response.data);
-        console.log('success finding name data!');
+        console.log(address, key)
+        const keysRef = db.collection('keys');
+        const q = await keysRef.where('address','==',address).get();
+        console.log(q)
+
+        if (q) {
+            res.status(404).json({ message: "Key not found for the specified address" });
+        } else {
+            res.status(200).json({ message: "Key found for the specified address" });
+        }
     } catch (error) {
-        console.error('Could not fetch data from Melissa');
-        res.status(500).json({erro: 'An error occurred'});
+        console.error('Error verifying key:', error);
+        res.status(500).json({ error: 'An error occurred' });
     }
-})
+});
 
 app.get('/create_key', async (req, res) => {
     const ssn = req.query.ssn;
@@ -100,18 +128,6 @@ app.get('/create_key', async (req, res) => {
         console.log('success finding property data!')
         const response = await axios.get(melissaPropURL, {params});
         res.json(response.data);
-        // const houseData = response.data.json();
-        // owners = [houseData.Records[0].PrimaryOwner.Name1Full, houseData.Records[0].PrimaryOwner.Name2Full]
-        // console.log(owners)
-        // if (owners.includes(name)){
-        //     const key = generateRandomString(10);
-        //     console.log(key);
-        //     res.send('key');
-        // }
-        // else
-        // {
-        //     res.send('Not on the lease!');
-        // }
     } catch (error) {
         console.error('Could not fetch data from Melissa');
         res.status(500).json({error: 'An error occurred'});
@@ -119,6 +135,24 @@ app.get('/create_key', async (req, res) => {
    
 })
 
+app.post('/upload_key', async (req, res) => {
+    const { address, key } = req.body;
+
+    if (!address || !key) {
+        return res.status(400).json({ error: "Address and key are required" });
+    }
+    try {
+        // await addDoc(collection(db, "keys"), {
+        //     address: address,
+        //     key: key,
+        //     timestamp: new Date()
+        // });
+        res.status(200).json({ message: "Key uploaded successfully" });
+    } catch (error) {
+        console.error("Error uploading key to Firestore:", error);
+        res.status(500).json({ error: "An error occurred while uploading the key" });
+    }
+});
 
 app.listen(port, () => {console.log("server started port 3000")});
 
