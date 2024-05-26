@@ -34,10 +34,11 @@ function Quiz(){
             if(currentQuestionIndex+1 < questions.length){
                 setQuestionIndex(currentQuestionIndex+1);
             }
+            else {
+                navigate('/key')
+            }
         }
-        else {
-            navigate('/key')
-        }
+        
     };
     const handleKeyPress = (e) => {
         if(e.key === 'Enter'){
