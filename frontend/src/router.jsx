@@ -13,6 +13,10 @@ import {
       path: "/",
       element: <Main/>,
     },
+    {
+      path: '/quiz',
+      element: <QuizPage/>,
+    },
    {/* {
       path:'/address',
       element: <AddressInput/>,
