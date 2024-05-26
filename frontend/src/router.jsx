@@ -12,6 +12,10 @@ import {
     {
       path: "/",
       element: <Main/>,
+    }, 
+    {
+      path: '/q',
+      element: <ReportPage/>,
     },
     {
       path: '/quiz',
@@ -21,10 +25,7 @@ import {
       path:'/address',
       element: <AddressInput/>,
     },
-    {
-      path: '/q',
-      element: <ReportPage/>,
-    },
+  
     {
       path: '/quiz',
       element: <QuizPage/>,
